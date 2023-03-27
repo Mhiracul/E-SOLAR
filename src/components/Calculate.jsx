@@ -106,7 +106,7 @@ const Calculate = () => {
           
   
   return (
-    <div className='shadow-lg shadow-white max-w-[1500px]' style={{ backgroundImage: 'url("http://localhost:3000/static/media/solarPanel1.5651b6c9ede4e8d0b973.jpeg")' }}>
+    <div className='shadow-lg shadow-white max-w-[1450px]' style={{ backgroundImage: 'url("http://localhost:3000/static/media/solarPanel1.5651b6c9ede4e8d0b973.jpeg")' , backgroundRepeat:'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
     <div className='mx-auto  px-4  max-w-[1240px]'>
         <div className='text-[#ffffff] hover:text-[#dc2626] font-bold text-center p-4 text-2xl ]'>E-SOLAR LOAD ANALYSIS HERE👇 </div>
       <Table>
