@@ -47,7 +47,7 @@ const Register = () => {
             <input className='border relative bg-gray-100 p-2' type="password" onChange={(e) => setPassword(e.target.value)} />
         </div>
         <button className='w-full py-3 mt-8 bg-[#dc2626] hover:bg-[#bd3333] relative text-white'>Sign Up</button>
-        <p className='flex items-center mt-2'><input className='mr-2 bg-black' type="checkbox"  />Remember Me</p>
+        <p className='flex items-center mt-2'><input className='mr-2 bg-black' type="checkbox"  />Remember</p>
         <p className='text-center mt-8'>Already a member? Sign in now</p>
         {error && (
   <div className="text-red-500 mt-2 text-sm">
