@@ -115,7 +115,6 @@ const Calculate = () => {
             <TH>Appliance</TH>
             <TH>kVA</TH>
             <TH>Quantity</TH>
-            <TH>Total value</TH>
           </tr>
         </thead>
         <tbody>
@@ -134,7 +133,6 @@ const Calculate = () => {
                   }}
                 />
               </TD>
-              <TD>{getTotalKVA(appliance) * appliances[appliance]}</TD> 
             </tr>
           ))}
         </tbody>
