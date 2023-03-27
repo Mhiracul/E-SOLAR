@@ -21,19 +21,29 @@ const VerifyEmail = () => {
 
     verifyEmail();
   }, []);
+  const handleVerifyEmail = () => {
+    window.open('https://mail.google.com/', '_blank'); // Replace with the URL of the user's email provider
+  }
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center h-screen">
+      
       {emailVerified ? (
-        <div> 
-        <p>Your email has been verified.</p>
-        <Link to="/login">Back to login</Link>
+        <div className='text-white text-center '> 
+        <p className='text-2xl py-4'>Your email has been verified.</p>
+        <Link className='bg-[#dc2626] w-[100px] rounded-md font-medium my-3  mx-auto px-6 py-1' to="/login">Back to login</Link>
         </div>
       ) : (
-        <p>
+        <div className="text-center">
+
+        <h1 className='text-white text-center font-uppercase text-2xl'>Check your Email for the Verification link</h1>
+      <button onClick={handleVerifyEmail}>Verify Email</button>
+
+        <p className='mb-4'>
           Your email has not been verified. Please check your inbox for a
           verification email and click the link to verify your email address.
         </p>
+        </div>
       )}
       {error && <p>{error}</p>}
     </div>

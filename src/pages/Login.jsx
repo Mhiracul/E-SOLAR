@@ -72,10 +72,10 @@ const Login = () => {
                 
             </div>
             <button className='w-full py-3 mt-8 bg-[#dc2626] hover:bg-[#bd3333] relative text-white'>Sign In</button>
-            <Link to="/forgot-password" className='text-sm text-1xl  font-light text-gray-500 cursor-pointer' style={{fontSize: '11px'}}>Forgot password?</Link>
+            <Link to="/forgot-password" className='relative text-sm text-1xl font-light text-gray-500 cursor-pointer' style={{fontSize: '11px'}}>Forgot password?</Link>
 
-            <p className='flex items-center mt-2'><input className='mr-2' type="checkbox"  />Remember Me</p>
-            <p className='text-center mt-8'>Not a member? <Link>Sign up now</Link> </p>
+            <p className='flex items-center mt-2'><input className=' relative text-black mr-2' type="checkbox"  />Remember Me</p>
+            <p className='text-center mt-8 py-2 text-sm'>Not a member? {''}<Link to='/register' className='relative underline text-[#dc2626] text-sm'>Sign up now</Link> </p>
             {error && (
   <div className="text-red-500 mt-2 text-sm">
     <p>{error}</p>
@@ -83,7 +83,7 @@ const Login = () => {
 )}
 
         </form>
-        
+
     </div>
     </div>
   )

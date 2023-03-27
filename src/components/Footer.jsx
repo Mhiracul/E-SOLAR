@@ -16,7 +16,7 @@ const Footer = () => {
         <p className='py-4'>We Offer a Wide Range of Quality Solar Panel Installation Services.
 </p>
         <div className='flex justify-between md:w-[75%] my-6'>
-            <FaFacebookSquare size={30} />
+          <a href="https://web.facebook.com/miracle.okeke">  <FaFacebookSquare size={30} /></a>
             <FaInstagram size={30} />
             <FaTwitterSquare size={30} />
             <FaGithubSquare size={30} />
@@ -54,6 +54,11 @@ const Footer = () => {
     </div>
     
       </div>
+      <div className='border-t border-gray-700 my-4 max-w[1250px]'></div>
+        <p className='text-center text-gray-400'>
+          Copyright © {new Date().getFullYear()}
+          <span className='text-gray-100'> Miracle</span>
+        </p>
     </div>
     </div>
   );

@@ -4,9 +4,12 @@ import {AiFillFacebook} from 'react-icons/ai'
 import {solarPanel1} from '../images/Aimages'
 import { UserAuth } from '../context/Auth';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+
 
 const Register = () => {
-    const [email, setEmail] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('')
   const { createUser } = UserAuth();
@@ -30,8 +33,8 @@ const Register = () => {
     <img className='absolute w-full h-full object-cover mix-blend-overlay' src={solarPanel1} alt="/" />
 
 
-<div className='flex justify-center items-center h-full'>
-    <form className='max-w-[400px] w-full mx-auto bg-white p-8' onSubmit={handleSubmit}>
+    <div className='flex justify-center items-center h-full'>
+      <form className='max-w-[400px] w-full mx-auto bg-white p-8' onSubmit={handleSubmit}>
         <h2 className='text-4xl font-bold text-center py-4 text-[#dc2626]'>E-SOLAR.</h2>
         <div className='flex justify-between py-8'>
             <p className='border shadow-lg hover:shadow-xl px-6 py-2 relative flex items-center'><AiFillFacebook className='mr-2' /> Facebook</p>
@@ -47,16 +50,17 @@ const Register = () => {
             <input className='border relative bg-gray-100 p-2' type="password" onChange={(e) => setPassword(e.target.value)} />
         </div>
         <button className='w-full py-3 mt-8 bg-[#dc2626] hover:bg-[#bd3333] relative text-white'>Sign Up</button>
-        <p className='flex items-center mt-2'><input className='mr-2 bg-black' type="checkbox"  />Remember</p>
-        <p className='text-center mt-8'>Already a member? Sign in now</p>
+        
+        <p className='flex items-center mt-2'><input className=' relative text-black mr-2' type="checkbox"  />Remember Me</p>
+            <p className='text-center mt-8 py-2 text-sm'>Already a member? {''}<Link to='/register' className='relative underline text-[#dc2626] text-sm'>Sign in now</Link> </p>
         {error && (
-  <div className="text-red-500 mt-2 text-sm">
-    <p>{error}</p>
-  </div>
-)}
-    </form>
-</div>
-</div>
+    <div className="text-red-500 mt-2 text-sm">
+        <p>{error}</p>
+    </div>
+    )}
+      </form>
+    </div>
+    </div>
   )
 }
 

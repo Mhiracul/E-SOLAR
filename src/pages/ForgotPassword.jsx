@@ -42,7 +42,7 @@ const ForgotPassword = () => {
         <p className='flex items-center mt-2'><input className='mr-2 bg-black' type="checkbox"  />Remember Me</p>
         <p className='text-center mt-8'>Already a member? Sign in now</p>
         <p className='text-center mt-8'>{message}</p>
-        <Link to="/">Back to login</Link>
+        <Link className='relative text-sm text-[#dc2626] ' to="/">Back to login</Link>
     </form>
 </div>
 </div>

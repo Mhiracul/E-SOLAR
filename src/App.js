@@ -11,6 +11,7 @@ import Protected from './components/Protected';
 import VerifyEmail from './pages/VerifyEmail';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
+import AboutUs from './pages/AboutUs';
 function App() {
   return (
     <div className="App">
@@ -28,6 +29,7 @@ function App() {
         <Route path="/verify-email" element={<VerifyEmail />} />
         <Route path="/reset" element={<ResetPassword />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/about-us" element={<AboutUs />} />
      
         <Route
             path='/account'

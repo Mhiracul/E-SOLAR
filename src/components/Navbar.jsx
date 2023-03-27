@@ -25,10 +25,10 @@ const Navbar = () => {
             <h1 className='w-full text-3xl font-bold text-[#dc2626]'>E-SOLAR.</h1>
             <ul className='hidden md:flex'>
                <Link to= "/"><li className='p-4'>Home</li></Link> 
-                <li className='p-4'>About</li>
+                <Link to="/about-us"><li className='p-4'>About</li></Link>
               <Link to="/register">  <li className='p-4'>Contact</li> </Link>
                <div>
-        {user?.displayName ? (
+        {user  ? (
             <div className='flex justify-between items-center'>
             
             <button onClick={handleSignOut} className='p-4 bg-[#dc2626] w-[100px] rounded-md font-medium my-3  mx-auto px-6 py-1'>
@@ -36,6 +36,9 @@ const Navbar = () => {
           </button> 
           <FaUserCircle size={24} className='mr-2 ml-3' />
             <span className='text-sm font-medium text-gray-500 inline-block' style={{ display: "inline-block !important", whiteSpace: "nowrap" }}>{user.displayName}</span>
+            {user.email && <span className="text-sm font-medium text-gray-500 inline-block" style={{ display: "inline-block !important", whiteSpace: "nowrap" }}>
+                ({user.email})
+              </span>}
           </div>
         ) : (
           <Link to= "/login">  <li className='p-4 bg-[#dc2626] rounded-md font-medium my-3  mx-auto px-6 py-1'>Login</li> </Link>
@@ -50,23 +53,27 @@ const Navbar = () => {
 
             <ul className={nav ?  'fixed left-0 top-0 w-[60%] h-full border-r  border-r-gray-900 bg-[#000300] ease-in-out duration-500' :  ' ease-in-out duration 500 fixed left-[-100%]'}>
             <h1 className='w-full text-3xl font-bold text-[#dc2626] m-4'>E-SOLAR.</h1>
-            {user?.displayName ? (
+            {user ? (
             <div className='flex justify-between items-center'>
             
-            <button onClick={handleSignOut} className='p-4 bg-[#dc2626] w-[100px] rounded-md font-medium my-3  mx-auto px-6 py-1'>
-            Logout
-          </button> 
+            
           <FaUserCircle size={24} className='mr-2 ml-3' />
-            <span className='text-sm font-medium text-gray-500 inline-block' style={{ display: "inline-block !important", whiteSpace: "nowrap" }}>{user.displayName}</span>
+            <span className='text-sm font-medium text-gray-500 inline-block ' style={{ display: "inline-block !important", whiteSpace: "nowrap" }}>{user.displayName}</span>
+            {user.email && <span className="text-sm font-medium text-gray-500 inline-block px-12" style={{ display: "inline-block !important", whiteSpace: "nowrap" }}>
+                ({user.email})
+              </span>}
           </div>
         ) : (
           <Link to= "/login">  <li className='p-4'>Login</li> </Link>
 
         )} 
               <Link to = "/">  <li className='p-4 border-b border-gray-600'>Home</li></Link> 
-                <li className='p-4 border-b border-gray-600'>About</li>
-                <li className='p-4 border-b border-gray-600'>Contact</li>
+              <Link to= "/about-us" ><li className='p-4 border-b border-gray-600'>About</li></Link> 
+                                    <li className='p-4 border-b border-gray-600'>Contact</li>
               <Link to= "/login">  <li className='p-4 border-b border-gray-600'>Login</li> </Link>
+              <button onClick={handleSignOut} className='p-4 bg-[#dc2626] w-[100px] rounded-md font-medium my-3  mx-auto px-6 py-1'>
+            Logout
+          </button> 
             </ul>
             </div>
         
