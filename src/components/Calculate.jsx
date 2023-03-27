@@ -9,7 +9,7 @@ const Table = tw.table`
   border-gray-500
   bg-white
   justify-center
-  
+  max-w[1250px]
 `;
 
 const TH = tw.th`
@@ -18,6 +18,7 @@ const TH = tw.th`
   text-[#dc2626]
   border
   border-gray-500
+  w-30
   
 `;
 
@@ -27,6 +28,7 @@ const TD = tw.td`
   border
   border-gray-500
   hover:text-[#dc2626]
+  w-30
 `;
 
 const Input = tw.input`
@@ -34,6 +36,7 @@ const Input = tw.input`
   text-right
   border
   border-gray-500
+  w-40
 `;
 const Calculate = () => {
     
@@ -106,15 +109,15 @@ const Calculate = () => {
           
   
   return (
-    <div className='shadow-lg shadow-white max-w-[1450px]' style={{ backgroundImage: 'url("http://localhost:3000/static/media/solarPanel1.5651b6c9ede4e8d0b973.jpeg")' , backgroundRepeat:'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-    <div className='mx-auto  px-4  max-w-[1240px]'>
+    <div className='shadow-lg shadow-white max-w-[1450px]' style={{ backgroundImage: 'url("https://149707435.v2.pressablecdn.com/wp-content/uploads/elementor/thumbs/solar-panel-2021-08-26-13-40-10-utc-piyygrx37izeen4xjaraelk8htt1sfenloragla8iw.jpg")' , backgroundRepeat:'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+    <div className='mx-auto  px-4  max-w-[1140px]'>
         <div className='text-[#ffffff] hover:text-[#dc2626] font-bold text-center p-4 text-2xl ]'>E-SOLAR LOAD ANALYSIS HERE👇 </div>
       <Table>
         <thead>
           <tr>
-            <TH>Appliance</TH>
-            <TH>kVA</TH>
-            <TH>Quantity</TH>
+            <TH className='w-20'>Appliance</TH>
+            <TH className='w-20'>kVA</TH>
+            <TH className='w-20'>Quantity</TH>
           </tr>
         </thead>
         <tbody>
